@@ -1,0 +1,147 @@
+#slider .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 470px;
+
+}
+
+#header{
+    border-bottom: 3px #2e9062 solid;
+}
+
+#welcome{
+    background-image: url("../../images/background-welcome.png");
+    background-repeat: repeat;
+    /*background: #f5f5f5;*/
+    padding: 12px 1px;
+}
+
+#event{
+    padding: 12px 1px;
+}
+
+.owl-pagination {
+    margin-top: -70px;
+    position: absolute;
+    width: 100%;
+}
+
+.owl-page > span{
+    background: #178e15 !important;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+    border-bottom: 2px #2e9062 solid;
+    border-radius: 0px !important;
+}
+
+.title-welcome{
+    padding: 16px;
+}
+
+.title-welcome h2{
+    color: #2e9062;
+}
+
+.title-welcome h3{
+    color: #2e9062;
+}
+
+.title-event{
+    padding: 16px 1px 60px 1px;
+    color: #2e9062;
+
+}
+
+.event-img{
+    width: 100%;
+    max-height: 270px;
+}
+
+.title-event-single{
+    background: #2e9062;
+}
+
+.text-title-event-single{
+    padding: 10px 1px;
+    color: white;
+    margin-bottom: 0px;
+
+}
+
+.text-event-date-single{
+    padding: 1px 1px;
+    color: white;
+}
+
+a div > p{
+    text-decoration: none;
+}
+
+#event-slider .col-md-3{
+    width: 100%;
+}
+
+#event-slider .owl-buttons{
+    position: absolute;
+    top: -50px;
+    left: 45.8%;
+
+}
+
+#event-slider .clickable{
+    width: 100%;
+}
+
+#footer{
+    background: #2e9062;
+    color: white;
+}
+
+#footer .contact-us{
+    padding: 16px 1px;
+}
+
+#credit{
+    background: black;
+    color: #e6e2e2;
+}
+
+#credit p{
+    padding: 10px 1px;
+
+}
+
+#breadcumb{
+    color: #2e9062;
+    margin-top: 46px;
+    background: #d6e4d9;
+    padding: 16px 2px;
+}
+
+#content .container{
+    background: rgba(236, 236, 236, 0.22);
+    border-radius: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#content .row{
+    padding: 1px 16px;
+}
+
+#breadcumb a{
+    text-decoration: none;
+    color: #2e9062;
+
+}
+
+#data-event a{
+    text-decoration: none;
+    color: #2e9062;
+
+}
+
+
