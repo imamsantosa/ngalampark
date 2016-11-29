@@ -19,8 +19,8 @@
                                 <div class="row">
                                     <a href="{{route('event-single', ['id' => $event->id, 'judul'=>$event->title])}}" class="event-detail">
                                         <div class="col-md-12 text-center">
-                                            <p class="text-title-event-single">Peluncuran Balon</p>
-                                            <p class="text-event-date-single"><strong>12 Agustus 2016</strong></p>
+                                            <p class="text-title-event-single">{{$event->title}}</p>
+                                            <p class="text-event-date-single"><strong>{{$event->date}}</strong></p>
                                         </div>
                                     </a>
                                 </div>
