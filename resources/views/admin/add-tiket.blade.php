@@ -37,7 +37,7 @@
                         <td>{{$tiket->author->username}}</td>
                         <td>
                             <a href="{{route('admin-delete-tiket', ['id' => $tiket->id])}}" onclick="return confirm('apakah anda yakin akan menghapus tiket pada tanggal tersebut?')"><div class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></div></a>
-                            <a href="{{route('admin-edit-tiket', ['id' => $event->id])}}"><div class="btn btn-warning btn-sm"><span class="fa fa-pencil-square-o"></span></div></a>
+                            <a href="{{route('admin-edit-tiket', ['id' => $tiket->id])}}"><div class="btn btn-warning btn-sm"><span class="fa fa-pencil-square-o"></span></div></a>
                         </td>
                     </tr>
                 @endforeach

@@ -17,7 +17,7 @@
     <div class="row" style="padding: 16px 16px">
         <div class="col-md-6 col-md-offset-3">
             <table id="data-event">
-                @foreach($posts as $post)
+                @foreach($events as $post)
                 <tr>
                     <td width="15%">
                         <img class="event-img" src="{{route('image', ['folder' => 'event', 'name' => $post->image])}}" alt="product">

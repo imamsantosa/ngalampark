@@ -5,6 +5,7 @@
     <link href="{{url('assets/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
     <link href="{{url('assets/bootstrap/css/santosa.css')}}" rel="stylesheet">
     <link href="{{url('assets/bootstrap/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
 <div id="header">

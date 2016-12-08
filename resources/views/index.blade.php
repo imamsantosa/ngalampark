@@ -8,6 +8,7 @@
     <link href="{{url('assets/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
     <link href="{{url('assets/owl-carousel/owl.theme.css')}}" rel="stylesheet">
     <link href="{{url('assets/owl-carousel/owl.transitions.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
 <div id="header">

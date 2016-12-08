@@ -49,6 +49,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('booking_code')->unique();
             $table->string('payment_code')->unique();
+            $table->boolean('is_active')->default(true);
             $table->boolean('is_pay');
             $table->date('payment_date')->nullable();
             $table->timestamps();

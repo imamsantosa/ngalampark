@@ -18,8 +18,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tiket <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Pemesanan</a></li>
-                        <li><a href="#">Pembatalan</a></li>
+                        <li><a role="button" data-toggle="modal" data-target="#pemesananmodal">Pemesanan</a></li>
+                        <li><a href="{{route('batal-pemesanan')}}">Pembatalan</a></li>
                     </ul>
                 </li>
                 <li><a href="{{route('list-event')}}">Event</a></li>
@@ -28,3 +28,39 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<div class="modal fade" id="pemesananmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Pemesanan Tiket</h4>
+            </div>
+            <form method="get" action="{{route('isi-data')}}">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Tangal</label>
+                        <select class="form-control" name="t">
+                            @foreach($tiket as $t)
+                            <option value="{{$t->id}}">{{$t->tanggal}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label >Total Tiket</label>
+                        <select class="form-control" name="tk">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-success" value="Lanjutkan &#8608;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
