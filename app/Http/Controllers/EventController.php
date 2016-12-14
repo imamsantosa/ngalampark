@@ -42,7 +42,6 @@ class EventController extends Controller
     public function dataEvent()
     {
         $data = Event::all();
-
         return View('admin/data-event', compact('data'));
     }
 
