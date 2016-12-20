@@ -35,6 +35,12 @@ Route::group(['prefix' => 'pemesanan'], function(){
     Route::get('batal-pemesanan', ['uses' => 'PemesananTiket@indexBatal', 'as' => 'batal-pemesanan']);
     Route::get('batal-pemesanan-konfirmasi', ['uses' => 'PemesananTiket@batalPemesananKonfirmasi', 'as' => 'batal-pemesanan-konfirmasi']);
     Route::get('batal-pemesanan/{kodebooking}', ['uses' => 'PemesananTiket@batalPemesananProses', 'as' => 'batal-pemesanan-proses']);
+
+
+    Route::get('cetak-tiket', ['uses' => 'PemesananTiket@indexCetak', 'as' => 'cetak-tiket']);
+    Route::get('cetak-tiket-konfirmasi', ['uses' => 'PemesananTiket@cetakTiketKonfirmasi', 'as' => 'cetak-tiket-konfirmasi']);
+    Route::get('cetak-tiket/{kodebooking}', ['uses' => 'PemesananTiket@cetakTiketProses', 'as' => 'cetak-tiket-proses']);
+
 });
 
 Route::get('images/{folder}/{name}', ['uses' => 'ImageController@getImage', 'as' => 'image']);

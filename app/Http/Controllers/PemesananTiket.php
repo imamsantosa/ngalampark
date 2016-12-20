@@ -14,7 +14,7 @@ class PemesananTiket extends Controller
         if($request->input('t') == null || $request->input('tk') == null)
             return redirect()->route('index');
 
-        if($request->input('tk') > 4)
+        if($request->input('tk') > 4 || $request->input('tk') < 1)
             return redirect()->route('index');
 
         $tanggal = Tiket::find($request->input('t'));
@@ -32,6 +32,9 @@ class PemesananTiket extends Controller
 
     public function setDataProcess(Request $request)
     {
+        if($request->input('tk') > 4 || $request->input('tk') < 1)
+            return redirect()->route('index');
+
         $pemesanan = Pemesanan::create([
             'is_pay' => false,
             'booking_code' => '',
@@ -154,5 +157,52 @@ class PemesananTiket extends Controller
         ]);
 
         return redirect()->route('batal-pemesanan')->with(['status' => 'success', 'message' => 'Tiket anda sukses dibatalkan']);
+    }
+
+
+    public function indexCetak()
+    {
+        return View('guest/cetak-tiket');
+    }
+
+    public function cetakTiketKonfirmasi(Request $request)
+    {
+
+        $data = Pemesanan::where('booking_code', $request->input('book'))->first();
+
+        if($data == null)
+            return redirect()->route('cetak-tiket')->with(['status' => 'danger', 'message' => 'Data tidak ditemukan']);
+
+        if($data->dataTiket->first()->is_print)
+            return redirect()->route('cetak-tiket')->with(['status' => 'warning', 'message' => 'Data sudah dicetak']);
+
+        $tmp = $data->dataTiket->first()->Tiket;
+        $kelengkapan =[
+            'tanggal' => $tmp->tanggal,
+            'harga' => $tmp->harga
+        ];
+
+        //$data = $data->first()->dataTiket;
+
+        return view('guest/cetak-tiket-konfirmasi', compact('data', 'kelengkapan'));
+    }
+
+    public function cetakTiketProses($kodebooking)
+    {
+        $data = DataTiket::where('booking_code', $kodebooking)->get();
+
+        if($data == null)
+            return redirect()->route('cetak-tiket')->with(['status' => 'danger', 'message' => 'Data tidak ditemukan']);
+
+        if($data->first()->is_print)
+            return redirect()->route('cetak-tiket')->with(['status' => 'danger', 'message' => 'Data tidak ditemukan']);
+
+        foreach($data as $d){
+            $d->update([
+                'is_print' => true
+            ]);
+        }
+
+        return redirect()->route('cetak-tiket')->with(['status' => 'success', 'message' => 'Tiket anda sukses dicetak']);
     }
 }

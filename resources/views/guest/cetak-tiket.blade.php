@@ -1,12 +1,12 @@
 @extends('template.template')
 
-@section('title') Batal Pemesanan | ngalampark.com @endsection
+@section('title') Cetak Tiket | ngalampark.com @endsection
 
 @section('breadcumb')
     <div id="breadcumb">
         <div class="container">
             <div class="col-md-12">
-                <p><a href="{{route('index')}}">Home</a> / pemesanan tiket / isi data </p>
+                <p><a href="{{route('index')}}">Home</a> / Cetak tiket </p>
             </div>
         </div>
     </div>
@@ -24,13 +24,13 @@
                         </div>
                     @endif
                     <br>
-                    <form action="{{route('batal-pemesanan-konfirmasi')}}" method="get">
+                    <form action="{{route('cetak-tiket-konfirmasi')}}" method="get">
                         <div class="form-group">
                             <label class="control-label">Kode Booking</label>
                             <input type="text" class="form-control" placeholder="Kode Booking" name="book">
                         </div>
                         <br>
-                        <input type="submit" value="Batalkan Tiket" class="btn btn-success btn-block">
+                        <input type="submit" value="Cetak Tiket" class="btn btn-success btn-block">
                     </form>
                 </div>
             </div>

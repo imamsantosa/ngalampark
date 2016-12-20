@@ -20,4 +20,5 @@ class DataTiket extends Model
     {
         return $this->belongsTo(Tiket::class, 'date');
     }
+
 }

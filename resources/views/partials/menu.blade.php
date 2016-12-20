@@ -20,6 +20,7 @@
                     <ul class="dropdown-menu">
                         <li><a role="button" data-toggle="modal" data-target="#pemesananmodal">Pemesanan</a></li>
                         <li><a href="{{route('batal-pemesanan')}}">Pembatalan</a></li>
+                        <li><a href="{{route('cetak-tiket')}}">Cetak</a></li>
                     </ul>
                 </li>
                 <li><a href="{{route('list-event')}}">Event</a></li>
