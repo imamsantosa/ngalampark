@@ -22,7 +22,7 @@ Route::group(['prefix' => 'tiket', 'namespace' => 'tiket'], function(){
     Route::get('batal', ['uses' => 'TiketController@indexBatal', 'as' => 'tiket-batal']);
 });
 
-Route::group(['prefix' => 'event', 'namespace' => 'event'], function(){
+Route::group(['prefix' => 'event'], function(){
     Route::get('/', ['uses' => 'EventController@listEvent', 'as' => 'list-event']);
     Route::get('{judul}/{id}', ['uses'=>'EventController@singlePost', 'as' => 'event-single']);
 });
