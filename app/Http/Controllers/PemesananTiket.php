@@ -32,9 +32,6 @@ class PemesananTiket extends Controller
 
     public function setDataProcess(Request $request)
     {
-        if($request->input('tk') > 4 || $request->input('tk') < 1)
-            return redirect()->route('index');
-
         $pemesanan = Pemesanan::create([
             'is_pay' => false,
             'booking_code' => '',
@@ -173,6 +170,7 @@ class PemesananTiket extends Controller
         if($data == null)
             return redirect()->route('cetak-tiket')->with(['status' => 'danger', 'message' => 'Data tidak ditemukan']);
 
+//        dd($data->dataTiket);
         if($data->dataTiket->first()->is_print)
             return redirect()->route('cetak-tiket')->with(['status' => 'warning', 'message' => 'Data sudah dicetak']);
 

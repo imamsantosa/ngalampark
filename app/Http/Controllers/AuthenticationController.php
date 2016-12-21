@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +26,7 @@ class AuthenticationController extends Controller
             'password' => $request->input('password')
         ];
 
-        if(auth()->attempt($creds)){
+        if(Admin::Authentication($creds)){
             return redirect()->route('admin-home');
         }
 
