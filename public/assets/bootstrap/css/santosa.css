@@ -148,3 +148,9 @@ a div > p{
     width: 100%;
 }
 
+
+.logo-header{
+    max-height: 125px;
+    /* top: 3px; */
+    margin-top: -50px;
+}
