@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="{{ url('assets/images/LOXO.png') }}" class="img-responsive logo-header">
+                <img src="{{ url('assets/images/LOXO.png') }}" class="img-responsive" style="max-height: 125px;/* top: 3px; */margin-top: -50px;">
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
